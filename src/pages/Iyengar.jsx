@@ -134,6 +134,7 @@ const Iyengar = () => {
               src="/iyengar.png"
               alt="Iyengar yoga with props"
               className="rounded-2xl object-cover w-full max-w"
+              loading="lazy"
             />
           </motion.div>
         </div>

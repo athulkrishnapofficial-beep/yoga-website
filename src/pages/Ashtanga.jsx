@@ -149,6 +149,7 @@ const Ashtanga = () => {
                 className="rounded-3xl object-cover w-full max-w"
                 src="/ashtanga-image.png"
                 alt="Ashtanga yoga pose"
+                loading="lazy"
               />
               <div className="absolute -bottom-6 -right-6 bg-[#e4e1d0] rounded-3xl w-24 h-24 blur-3xl opacity-60"></div>
             </div>

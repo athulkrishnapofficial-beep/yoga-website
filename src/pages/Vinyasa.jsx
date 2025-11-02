@@ -61,6 +61,7 @@ const Vinyasa = () => {
               src="/vinyasa.jpg"
               alt="Vinyasa yoga flow"
               className="rounded-2xl shadow-2xl object-cover w-full max-w-md md:max-w-lg"
+              loading="lazy"
             />
           </motion.div>
 

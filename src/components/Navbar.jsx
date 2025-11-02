@@ -67,6 +67,7 @@ const Navbar = () => {
             <motion.img
               src="/logo.jpg"
               alt="Yoga Logo"
+              loading="lazy"
               className="h-12 w-auto rounded-full"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}

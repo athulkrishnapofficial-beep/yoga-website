@@ -101,6 +101,7 @@ const Hero = () => {
               className="rounded-lg object-cover w-full max-w-md md:max-w-full"
               src="/hero-image.png" // **IMPORTANT: Add an image here**
               alt="Calm yoga studio"
+              loading="lazy"
             />
           </motion.div>
 

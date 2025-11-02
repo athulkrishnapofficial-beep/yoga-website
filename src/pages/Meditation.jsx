@@ -60,6 +60,7 @@ const Meditation = () => {
               src="/meditation-image.jpeg"
               alt="Person meditating peacefully"
               className="rounded-2xl shadow-2xl object-cover w-full max-w-md md:max-w-lg h-[480px]"
+              loading="lazy"
             />
           </motion.div>
 

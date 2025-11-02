@@ -45,9 +45,9 @@ const Meditation = () => {
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
     >
-      <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* === Grid Layout === */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
+        <div className="grid grid-cols-1 px-5 md:grid-cols-2 gap-14 items-center">
 
           {/* === IMAGE CONTENT === */}
           <motion.div

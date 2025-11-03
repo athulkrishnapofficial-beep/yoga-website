@@ -15,7 +15,8 @@ const Hatha = lazy(() => import('./pages/Hatha'));
 const Iyengar = lazy(() => import('./pages/Iyengar'));
 const Vinyasa = lazy(() => import('./pages/Vinyasa'));
 const Meditation = lazy(() => import('./pages/Meditation'));
-// const Contact = lazy(() => import('./pages/Contact')); // Ready for when you build it
+const OfflineClasses = lazy(() => import('./pages/OfflineClasses'));
+
 
 // --- Global Styles ---
 const colors = {
@@ -39,7 +40,7 @@ function AnimatedRoutes() {
         <Route path="/iyengar" element={<Iyengar />} />
         <Route path="/vinyasa" element={<Vinyasa />} />
         <Route path="/meditation" element={<Meditation />} />
-        {/* <Route path="/contact" element={<Contact />} /> */}
+        <Route path="/offline-classes" element={<OfflineClasses />} />
       </Routes>
     </AnimatePresence>
   );

@@ -1,16 +1,17 @@
+// src/pages/Home.jsx
 import React from 'react';
 import Hero from '../components/Hero';
-// You will import other sections here later, like:
-// import ClassPreview from '../components/ClassPreview';
-// import Testimonials from '../components/Testimonials';
+import ClassPreview from '../components/ClassPreview';
+import Testimonials from '../components/Testimonials'; // <-- 1. Import it
 
 const Home = () => {
   return (
     <>
       <Hero />
-      {/* <ClassPreview />
-        <Testimonials /> 
-      */}
+      <ClassPreview />
+      <Testimonials /> {/* <-- 2. Add it here */}
+      
+      {/* <IntroOfferCta /> */}
     </>
   );
 };

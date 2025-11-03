@@ -1,29 +1,36 @@
 // src/App.jsx
-import React, { Suspense, lazy } from 'react'; // <-- 1. Import Suspense and lazy
-import Navbar from './components/Navbar';
-import Loading from './components/Loading'; // <-- 2. Import your new Loading component
+import React, { Suspense, lazy } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
-// 3. Change all your page imports to use React.lazy()
+// --- Static Components ---
+import Navbar from './components/Navbar';
+import Loading from './components/Loading';
+import Footer from './components/Footer';
+
+// --- Lazy-Loaded Page Components ---
 const Home = lazy(() => import('./pages/Home'));
 const Ashtanga = lazy(() => import('./pages/Ashtanga'));
 const Hatha = lazy(() => import('./pages/Hatha'));
 const Iyengar = lazy(() => import('./pages/Iyengar'));
 const Vinyasa = lazy(() => import('./pages/Vinyasa'));
 const Meditation = lazy(() => import('./pages/Meditation'));
+// const Contact = lazy(() => import('./pages/Contact')); // Ready for when you build it
 
-import { Routes, Route, useLocation } from 'react-router-dom';
-import { AnimatePresence } from 'framer-motion';
-
+// --- Global Styles ---
 const colors = {
-  pageBg: "#F5F3E7",
+  pageBg: "#F5F3E7", // Your earthy cream background
   text: "#586d32",
 };
 
-// Your AnimatedRoutes component stays the same
+/**
+ * Handles all animated page transitions.
+ */
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
+    // 'mode="wait"' ensures the old page animates out before the new one animates in.
     <AnimatePresence mode="wait"> 
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Home />} />
@@ -32,29 +39,31 @@ function AnimatedRoutes() {
         <Route path="/iyengar" element={<Iyengar />} />
         <Route path="/vinyasa" element={<Vinyasa />} />
         <Route path="/meditation" element={<Meditation />} />
+        {/* <Route path="/contact" element={<Contact />} /> */}
       </Routes>
     </AnimatePresence>
   );
 }
 
+/**
+ * The main application component.
+ * Lays out the static Navbar/Footer and the dynamic, routed page content.
+ */
 function App() {
   return (
-    <div className="min-h-screen" style={{ backgroundColor: colors.pageBg }}>
+    // 'flex flex-col' and 'min-h-screen' ensure the footer sticks to the bottom.
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: colors.pageBg }}>
       
       <Navbar /> 
 
-      <main>
-        {/*
-          4. Wrap your routes in a <Suspense> component
-          This tells React what to show while it's "suspending" 
-          to go fetch the lazy-loaded page file.
-        */}
+      {/* 'flex-grow' makes the main content area expand to fill all available space */}
+      <main className="flex-grow">
         <Suspense fallback={<Loading />}>
           <AnimatedRoutes />
         </Suspense>
       </main>
       
-      {/* <Footer /> */}
+      <Footer />
       
     </div>
   );

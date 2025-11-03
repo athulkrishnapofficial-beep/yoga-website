@@ -40,14 +40,13 @@ const imageVariants = {
 const Hero = () => {
   return (
     <section 
-      className="min-h-[calc(100vh-5rem)] flex items-start" // <-- 1. CHANGED items-center to items-start
+      className="min-h-[calc(100vh-5rem)] flex items-start" 
       style={{ backgroundColor: colors.navBg }} 
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 md:pt-24"> {/* <-- 2. ADDED padding-top */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 md:pt-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           
           {/* == TEXT CONTENT == */}
-          {/* 'order-last' on mobile, 'order-first' on desktop */}
           <motion.div
             className="text-center md:text-left order-last md:order-first"
             variants={containerVariants}
@@ -71,13 +70,20 @@ const Hero = () => {
               All levels are welcome to join our journey.
             </motion.p>
             
+            {/* --- BUTTON CONTAINER - MODIFIED --- */}
             <motion.div
-              className="mt-10"
+              // This stacks them on mobile and puts them in a row on desktop
+              className="mt-10 flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center md:items-start"
               variants={itemVariants}
             >
+              {/* == BUTTON 1: OFFLINE CLASS (Google Maps) == */}
               <motion.a
-                href="/new-students" // Link to your "New Student Offer" page
-                className="inline-block px-10 py-4 text-base font-medium rounded-full shadow-lg transition-transform"
+                // ** REPLACE THIS with your Google Maps link **
+                href="https://maps.app.goo.gl/QQZKF9sXtDf4XMwN9"
+                target="_blank" 
+                rel="noopener noreferrer"
+                // w-full on mobile, w-auto on desktop
+                className="inline-block w-full md:w-auto text-center px-10 py-4 text-base font-medium rounded-full shadow-lg transition-transform"
                 style={{ 
                   backgroundColor: colors.text, 
                   color: colors.buttonText 
@@ -85,7 +91,53 @@ const Hero = () => {
                 whileHover={{ scale: 1.05, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
                 transition={{ type: "spring", stiffness: 300 }}
               >
-                Try Our Intro Offer
+                Our Offline Class
+              </motion.a>
+
+              {/* == BUTTON 2: ONLINE CLASS (WhatsApp) == */}
+              <motion.a
+                // ** REPLACE THIS with your WhatsApp link **
+                href="httpss://wa.me/919496601244?text=Hello!%20I%20saw%20your%20website%20and%20I'm%20interested%20in%20joining%20your%20online%20yoga%20class.%20Could%20you%20please%20send%20me%20more%20details%3F"
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block w-full md:w-auto text-center px-10 py-4 text-base font-medium rounded-full shadow-lg transition-transform border"
+                style={{ 
+                  backgroundColor: colors.navBg, 
+                  color: colors.text, 
+                  borderColor: colors.text 
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+                  backgroundColor: colors.text, 
+                  color: colors.buttonText      
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Join Our Online Class
+              </motion.a>
+
+              {/* == BUTTON 3: DEMO CLASS (WhatsApp) - NEW == */}
+              <motion.a
+                // ** REPLACE THIS with your Demo WhatsApp link **
+                href="httpss://wa.me/919496601244?text=Hello!%20I'm%20interested%20in%20trying%20a%20demo%20class."
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-block w-full md:w-auto text-center px-10 py-4 text-base font-medium rounded-full shadow-lg transition-transform border"
+                style={{ 
+                  backgroundColor: colors.navBg, 
+                  color: colors.text, 
+                  borderColor: colors.text 
+                }}
+                whileHover={{ 
+                  scale: 1.05, 
+                  boxShadow: "0px 10px 20px rgba(0,0,0,0.1)",
+                  backgroundColor: colors.text, 
+                  color: colors.buttonText      
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                Try Our Demo Class
               </motion.a>
             </motion.div>
           </motion.div>
@@ -99,7 +151,7 @@ const Hero = () => {
           >
             <img
               className="rounded-lg object-cover w-full max-w-md md:max-w-full"
-              src="/hero-image.png" // **IMPORTANT: Add an image here**
+              src="/hero-image.png" 
               alt="Calm yoga studio"
               loading="lazy"
             />

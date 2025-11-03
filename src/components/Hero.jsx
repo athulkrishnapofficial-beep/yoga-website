@@ -97,7 +97,7 @@ const Hero = () => {
               {/* == BUTTON 2: ONLINE CLASS (WhatsApp) == */}
               <motion.a
                 // ** REPLACE THIS with your WhatsApp link **
-                href="httpss://wa.me/919496601244?text=Hello!%20I%20saw%20your%20website%20and%20I'm%20interested%20in%20joining%20your%20online%20yoga%20class.%20Could%20you%20please%20send%20me%20more%20details%3F"
+                href="https://wa.me/919496601244?text=Hello!%20I%20saw%20your%20website%20and%20I%27m%20interested%20in%20joining%20your%20online%20yoga%20class.%20Could%20you%20please%20send%20me%20more%20details%3F"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block w-full md:w-auto text-center px-10 py-4 text-base font-medium rounded-full shadow-lg transition-transform border"
@@ -120,7 +120,7 @@ const Hero = () => {
               {/* == BUTTON 3: DEMO CLASS (WhatsApp) - NEW == */}
               <motion.a
                 // ** REPLACE THIS with your Demo WhatsApp link **
-                href="httpss://wa.me/919496601244?text=Hello!%20I'm%20interested%20in%20trying%20a%20demo%20class."
+                href="https://wa.me/919496601244?text=Hello!%20I%27m%20interested%20in%20trying%20a%20demo%20class"
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="inline-block w-full md:w-auto text-center px-10 py-4 text-base font-medium rounded-full shadow-lg transition-transform border"

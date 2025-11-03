@@ -89,7 +89,7 @@ const Navbar = () => {
               </motion.a>
             ))}
             <motion.a
-              href="/contact"
+              href="https://wa.me/919496601244?text=Hello!"
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 200 }}
               className="ml-6 inline-flex items-center px-6 py-2 border border-transparent text-base font-medium rounded-full shadow-sm transition-colors duration-200"

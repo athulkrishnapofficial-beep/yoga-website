@@ -1,0 +1,16 @@
+/* src/components/SpinnerInfinity.css */
+
+@keyframes spinners-react-infinity {
+  0% {
+    stroke-dasharray: 1, 347;
+    stroke-dashoffset: 75;
+  }
+  50% {
+    stroke-dasharray: 313.2, 34.8;
+    stroke-dashoffset: -34.8;
+  }
+  100% {
+    stroke-dasharray: 1, 347;
+    stroke-dashoffset: -423;
+  }
+}

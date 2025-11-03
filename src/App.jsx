@@ -58,7 +58,7 @@ function App() {
       <Navbar /> 
 
       {/* 'flex-grow' makes the main content area expand to fill all available space */}
-      <main className="flex-grow">
+      <main className="grow">
         <Suspense fallback={<Loading />}>
           <AnimatedRoutes />
         </Suspense>

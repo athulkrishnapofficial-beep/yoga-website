@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Loading from './components/Loading';
 import Footer from './components/Footer';
+import SparkleLeaves from './components/SparkleLeaves';
 
 // --- Lazy-Loaded Page Components ---
 const Home = lazy(() => import('./pages/Home'));
@@ -16,6 +17,7 @@ const Iyengar = lazy(() => import('./pages/Iyengar'));
 const Vinyasa = lazy(() => import('./pages/Vinyasa'));
 const Meditation = lazy(() => import('./pages/Meditation'));
 const OfflineClasses = lazy(() => import('./pages/OfflineClasses'));
+
 
 
 // --- Global Styles ---
@@ -56,6 +58,7 @@ function App() {
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: colors.pageBg }}>
       
       <Navbar /> 
+      <SparkleLeaves /> 
 
       {/* 'flex-grow' makes the main content area expand to fill all available space */}
       <main className="grow">

@@ -79,7 +79,7 @@ const Hero = () => {
               {/* == BUTTON 1: OFFLINE CLASS (Google Maps) == */}
               <motion.a
                 // ** REPLACE THIS with your Google Maps link **
-                href="https://maps.app.goo.gl/QQZKF9sXtDf4XMwN9"
+                href="https://maps.app.goo.gl/ZBN4eN9xHwbeFhUN7"
                 target="_blank" 
                 rel="noopener noreferrer"
                 // w-full on mobile, w-auto on desktop

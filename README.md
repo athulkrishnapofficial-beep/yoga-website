@@ -79,3 +79,11 @@ Contributions are what make the open-source community such an amazing place to l
 4.  Push to the Branch (`git push origin feature/AmazingFeature`)
 5.  Open a Pull Request
 
+## 👤 Author
+
+**Athul Krishna**
+* **GitHub:** [@athulkrishnapofficial-beep](https://github.com/athulkrishnapofficial-beep)
+* **LinkedIn:** [Your LinkedIn URL](https://www.linkedin.com/in/athulkrishnap)
+* **Website:** [Athul krishna](https://athulkrishnap.com)
+
+
